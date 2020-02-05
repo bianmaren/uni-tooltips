@@ -16,7 +16,7 @@
 
 <script>
     export default {
-        name: 'UniTooltips',
+        name: 'UniTooltip',
         props: {
             //是否显示
             tooltipShow:{
@@ -92,11 +92,17 @@
                     return;
                 }
 
+                console.info(_this.parentThis)
+                console.info(_this.eleId)
+
                 const query = uni.createSelectorQuery().in(_this.$parent);
                 query.select('#'+_this.eleId).boundingClientRect(data => {
 
                     var pos = { x: data.left, y: data.top };
                     var wh = { w: data.width, h: data.height };
+
+                    console.info(pos)
+                    console.info(wh)
 
                     var outerWidth = 0;
                     var outerHeight = 0;
@@ -110,6 +116,9 @@
                         outerWidth = dd.width;
                         outerHeight = dd.height;
 
+                        console.log("outerWidth:"+outerWidth);
+                        console.log("outerHeight:"+outerHeight);
+
                         const systemInfo = uni.getSystemInfoSync();
                         var windowWidth = systemInfo.windowWidth;
 
@@ -122,21 +131,21 @@
                                 _this.top =  pos.y - outerHeight - _this.distance;
                                 _this.justStyleObject = {
                                     'left':(outerWidth - wh.w/2) + "px",
-                                    'borderColor':"transparent transparent "+_this.backgroundColor+" transparent"
+                                    'borderColor':_this.backgroundColor+" transparent transparent transparent"
                                 };
                             }else if( leftTmp < 0 ){
                                 _this.left = pos.x;
                                 _this.top = pos.y - outerHeight - _this.distance;
                                 _this.justStyleObject = {
                                     'left':wh.w/2 + "px",
-                                    'borderColor':"transparent transparent "+_this.backgroundColor+" transparent"
+                                    'borderColor':_this.backgroundColor+" transparent transparent transparent"
                                 };
                             }else{
                                 _this.left = pos.x - (outerWidth - wh.w)/2;
                                 _this.top = pos.y - outerHeight - _this.distance
                                 _this.justStyleObject = {
                                     'left':"50%",
-                                    'borderColor':"transparent transparent "+_this.backgroundColor+" transparent"
+                                    'borderColor':_this.backgroundColor+" transparent transparent transparent"
                                 };
                             }
                         }
@@ -172,7 +181,7 @@
                             _this.top = pos.y - (outerHeight - wh.h)/2;
                             _this.justStyleObject = {
                                 top:'50%',
-                                'borderColor':"transparent transparent "+_this.backgroundColor+" transparent"
+                                'borderColor':"transparent transparent transparent " +  _this.backgroundColor
                             }
                         }
 
@@ -181,7 +190,7 @@
                             _this.top = pos.y - (outerHeight - wh.h)/2;
                             _this.justStyleObject = {
                                 top:'50%',
-                                'borderColor':"transparent transparent "+_this.backgroundColor+" transparent"
+                                'borderColor':"transparent "+_this.backgroundColor+" transparent  transparent"
                             }
                         }
 
