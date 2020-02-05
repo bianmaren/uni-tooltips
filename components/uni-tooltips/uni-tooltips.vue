@@ -8,7 +8,7 @@
                       :style="{borderColor:splitColor}"
                       v-for="item in btns" @click="btnClick(item)">{{ item }}</text>
             </view>
-            <span :class="justClass" :style="justStyleObject"></span>
+            <view :class="justClass" :style="justStyleObject"></view>
         </view>
 
     </view>
