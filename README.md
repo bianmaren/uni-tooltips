@@ -15,21 +15,21 @@
 在 `script`  中引用组件
 
 ```
-import uniTooltips from '@/components/uni-tooltips/uni-tooltips.vue'
+import bianmarenTooltip from '@/components/bianmaren-tooltips/bianmaren-tooltips.vue'
 export default {
-    components: {uniTooltips}
+    components: {bianmarenTooltip}
 }
 ```
 
 在 `template` 中使用组件
 
 ```
-<uniTooltips
+<bianmarenTooltip
     :gravity="gravity"
     :tooltipShow="tooltipShow"
     :btns="tooltipBtns"
     :eleId="eleId"
-    @btnClick="click"></uniTooltips>
+    @btnClick="click"></bianmarenTooltip>
 ```
 
 # 属性说明

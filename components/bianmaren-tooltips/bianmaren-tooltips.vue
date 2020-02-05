@@ -16,7 +16,7 @@
 
 <script>
     export default {
-        name: 'UniTooltip',
+        name: 'BianmarenTooltip',
         props: {
             //是否显示
             tooltipShow:{
