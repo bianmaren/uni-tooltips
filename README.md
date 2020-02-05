@@ -1,5 +1,5 @@
 # uni-tooltips 工具提示组件
-兼容微信小程序，h5，uni-app。不支持nvue
+兼容微信小程序，h5，uni-app。暂不支持nvue
 
 
 工具提示组件，为了解决工具提示的问题。
