@@ -39,6 +39,7 @@ export default {
 |:---|:---:|---:|---:|
 |tooltipShow|Boolean|false|是否显示|
 |textColor|String|#ffffff|字体颜色|
+|fontSize|String|28rpx|字体大小|
 |backgroundColor|String|#000000|背景颜色|
 |splitColor|String|#ffffff|分隔符颜色|
 |btns|Array|['HelloWorld']|提示里面显示的按钮|
