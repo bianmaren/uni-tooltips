@@ -43,3 +43,12 @@ export default {
 |事件称名|说明|返回值|
 |:---|:---:|---:|   
 |btnClick|按钮点击|按钮名称|
+
+# 案例
+
+[demo 项目地址：https://github.com/bianmaren/uni-tooltips-example](https://github.com/bianmaren/uni-tooltips-example),
+
+![top.png](https://file.jxyunge.com/Phwj5JhE4YWb6PNt8d6Z_1580875496947.png)
+![bottom.png](https://file.jxyunge.com/sp76SRBdbwybZZmRGsKz_1580875496888.png)
+![right.png](https://file.jxyunge.com/P3exJsHQfGiDmQDdQRzW_1580875491550.png)
+![left.png](https://file.jxyunge.com/P2iB7sSHW7hczXrdMZYA_1580875496804.png)
