@@ -4,6 +4,13 @@
 工具提示组件，为了解决工具提示的问题。
 组件名：uni-tooltips，代码块： uniTooltips。
 
+# 案例
+
+[demo 项目地址：https://github.com/bianmaren/uni-tooltips-example](https://github.com/bianmaren/uni-tooltips-example),
+
+![demo.png](https://file.jxyunge.com/Sw5yEFc3P8mbGBKDBeb7_1580876419165.png)
+
+
 # 使用方式
 在 `script`  中引用组件
 
@@ -44,8 +51,3 @@ export default {
 |:---|:---:|---:|   
 |btnClick|按钮点击|按钮名称|
 
-# 案例
-
-[demo 项目地址：https://github.com/bianmaren/uni-tooltips-example](https://github.com/bianmaren/uni-tooltips-example),
-
-![demo.png](https://file.jxyunge.com/Sw5yEFc3P8mbGBKDBeb7_1580876419165.png)
