@@ -1,8 +1,9 @@
 # uni-tooltips 工具提示组件
-兼容微信小程序，h5，uni-app
+兼容微信小程序，h5，uni-app。不支持nvue
+
 
 工具提示组件，为了解决工具提示的问题。
-组件名：uni-tooltips，代码块： uniTooltips。
+组件名：bianmaren-tooltips，代码块： bianmarenTooltips。
 
 # 案例
 
