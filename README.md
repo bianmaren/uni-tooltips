@@ -48,7 +48,4 @@ export default {
 
 [demo 项目地址：https://github.com/bianmaren/uni-tooltips-example](https://github.com/bianmaren/uni-tooltips-example),
 
-![top.png](https://file.jxyunge.com/Phwj5JhE4YWb6PNt8d6Z_1580875496947.png)
-![bottom.png](https://file.jxyunge.com/sp76SRBdbwybZZmRGsKz_1580875496888.png)
-![right.png](https://file.jxyunge.com/P3exJsHQfGiDmQDdQRzW_1580875491550.png)
-![left.png](https://file.jxyunge.com/P2iB7sSHW7hczXrdMZYA_1580875496804.png)
+![demo.png](https://file.jxyunge.com/Sw5yEFc3P8mbGBKDBeb7_1580876419165.png)
