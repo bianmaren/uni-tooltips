@@ -1,10 +1,10 @@
-#uni-tooltips 工具提示组件
+# uni-tooltips 工具提示组件
 兼容微信小程序，h5，uni-app
 
 工具提示组件，为了解决工具提示的问题。
 组件名：uni-tooltips，代码块： uniTooltips。
 
-#使用方式
+# 使用方式
 在 `script`  中引用组件
 
 ```
@@ -25,7 +25,7 @@ export default {
     @btnClick="click"></uniTooltips>
 ```
 
-#属性说明
+# 属性说明
 
 |属性名|类型|默认值|说明|
 |:---|:---:|---:|---:|
@@ -38,7 +38,7 @@ export default {
 |gravity|String|bottom,top,left,right|方向|
 |distance|Number|10|工具提示距离挂载元素距离|
 
-#事件说明
+# 事件说明
 
 |事件称名|说明|返回值|
 |:---|:---:|---:|   
