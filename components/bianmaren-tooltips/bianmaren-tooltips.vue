@@ -2,7 +2,7 @@
     <view>
         <view id="just-tooltip"
               class="just-tooltip animated flipInBottom"
-              :style="{width: 'auto', left: left+'px',top: top+'px',backgroundColor:backgroundColor,color:textColor}">
+              :style="{width: 'auto', left: left+'px',top: top+'px',backgroundColor:backgroundColor,color:textColor,fontSize: fontSize}">
             <view class="just-con">
                 <text class="item"
                       :style="{borderColor:splitColor}"
@@ -27,6 +27,11 @@
             textColor:{
                 type: String,
                 default: "#ffffff"
+            },
+            //字体大小
+            fontSize:{
+                type: String,
+                default: "28rpx"
             },
             //背景颜色
             backgroundColor:{
@@ -98,6 +103,7 @@
                 const query = uni.createSelectorQuery().in(_this.$parent);
                 query.select('#'+_this.eleId).boundingClientRect(data => {
 
+                    console.info(data);
                     var pos = { x: data.left, y: data.top };
                     var wh = { w: data.width, h: data.height };
 
@@ -115,9 +121,6 @@
 
                         outerWidth = dd.width;
                         outerHeight = dd.height;
-
-                        console.log("outerWidth:"+outerWidth);
-                        console.log("outerHeight:"+outerHeight);
 
                         const systemInfo = uni.getSystemInfoSync();
                         var windowWidth = systemInfo.windowWidth;
@@ -179,6 +182,7 @@
                         if('left' === _this.gravity){
                             _this.left = pos.x - outerWidth - _this.distance;
                             _this.top = pos.y - (outerHeight - wh.h)/2;
+                            console.log("top:"+ _this.top)
                             _this.justStyleObject = {
                                 top:'50%',
                                 'borderColor':"transparent transparent transparent " +  _this.backgroundColor
@@ -207,11 +211,21 @@
     }
 </script>
 
-<style>
+<style scoped>
 
-    /* just-Tips */
-    .just-tooltip{position:absolute;left:0;top:0;border-radius:5px;background:#000;/*display:inline-block;*/z-index:9999;}
-    .just-tooltip .just-con{padding:8px 10px;}
+    .just-tooltip{
+        position:absolute;
+        left:0;top:0;
+        border-radius:5px;
+        background:#000;
+        z-index:9999;
+    }
+    .just-tooltip .just-con{
+        padding:8px 10px;
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+    }
 
     .just-tooltip .just-top,
     .just-tooltip .just-bottom,
@@ -340,7 +354,6 @@
     }
 
     .item{
-        display: inline-block;
         border-right: #fff solid 1px;
         padding: 0 20rpx;
     }
